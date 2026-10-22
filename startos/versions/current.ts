@@ -1,18 +1,17 @@
 import { IMPOSSIBLE, VersionInfo } from '@start9labs/start-sdk'
 
 export const current = VersionInfo.of({
-  version: '2.3.3:2',
+  version: '2.3.3:3',
   releaseNotes: {
     en_US:
-      'Restarting Miniflux while it is still starting stops every process of the previous run.',
+      'Stops trusting certificates from a compromised certificate authority (eMudhra).',
     es_ES:
-      'Reiniciar Miniflux mientras aún se está iniciando detiene todos los procesos de la ejecución anterior.',
+      'Deja de confiar en los certificados de una autoridad de certificación comprometida (eMudhra).',
     de_DE:
-      'Ein Neustart von Miniflux, während es noch startet, beendet alle Prozesse des vorherigen Laufs.',
+      'Vertraut Zertifikaten einer kompromittierten Zertifizierungsstelle (eMudhra) nicht mehr.',
     pl_PL:
-      'Ponowne uruchomienie Miniflux w trakcie uruchamiania zatrzymuje wszystkie procesy poprzedniego uruchomienia.',
-    fr_FR:
-      "Redémarrer Miniflux pendant son démarrage arrête tous les processus de l'exécution précédente.",
+      'Przestaje ufać certyfikatom przejętego urzędu certyfikacji (eMudhra).',
+    fr_FR: `Ne fait plus confiance aux certificats d'une autorité de certification compromise (eMudhra).`,
   },
   migrations: {
     up: async ({ effects }) => {},
